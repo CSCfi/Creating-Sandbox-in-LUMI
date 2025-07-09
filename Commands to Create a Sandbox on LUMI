@@ -34,7 +34,7 @@ cotainr build ./conda-cont-1 --base-image docker://ubuntu:22.04 --conda-env env.
 
 
 
-Inside the container, you can:
+-> Inside the container, you can:
 
 CopyEdit
 which python
