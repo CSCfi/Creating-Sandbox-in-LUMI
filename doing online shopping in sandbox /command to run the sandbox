@@ -1,9 +1,9 @@
 module load LUMI/24.06 systools
 
 # Build a writable development container
-singularity build --sandbox onlineshopping.sif onlineshopping.def
+singularity build --sandbox online_shopping.sif online_shopping.def
 
-singularity exec onlineshopping.sif /bin/bash
+singularity exec online_shopping.sif /bin/bash
 
 lynx https://www.amazon.com
 
