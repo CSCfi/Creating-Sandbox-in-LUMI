@@ -1,0 +1,9 @@
+
+module load LUMI/24.03 systools
+
+singularity build --sandbox output.sif desk.def
+
+singularity build --sandbox output.sif desk.def
+
+lynx https://csc.fi/en/
+
