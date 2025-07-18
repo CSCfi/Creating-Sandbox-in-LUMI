@@ -39,5 +39,5 @@ Locale: en_US.UTF-8
 ### Build:
 ```bash
 module load LUMI/24.06 systools
-singularity build --sandbox onlineshopping.sif online_shopping.def
+singularity build --sandbox online_shopping.sif online_shopping.def
 ```
