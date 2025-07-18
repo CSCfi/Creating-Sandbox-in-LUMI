@@ -1,4 +1,4 @@
-# Singularity Containers on LUMI: CLI Tools & Secure Browser
+# Singularity Sandbox Containers on LUM: CLI Tools & Secure Browser
 
 This project contains two Singularity container environments for use on the LUMI supercomputer. Both are built using Ubuntu 22.04 and targeted at different CLI use cases:
 
@@ -7,7 +7,7 @@ This project contains two Singularity container environments for use on the LUMI
 
 ---
 
-## 📦 Container 1: `web browsig.def` – CLI Tools Sandbox
+## 📦 Container 1: `web browsing.def` – CLI Tools Sandbox
 
 A simple Ubuntu-based environment for general command-line use.
 
@@ -19,7 +19,7 @@ A simple Ubuntu-based environment for general command-line use.
 ### Build:
 ```bash
 module load LUMI/24.03 systools
-singularity build --sandbox desk.sif `web browsig.def`
+singularity build --sandbox desk.sif `web browsing.def`
 ```
 
 
