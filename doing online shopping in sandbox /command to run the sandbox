@@ -1,0 +1,15 @@
+module load LUMI/24.06 systools
+
+# Build a writable development container
+singularity build --sandbox onlineshopping.sif onlineshopping.def
+
+singularity exec onlineshopping.sif /bin/bash
+
+lynx https://www.amazon.com
+
+Option B: Private browsing using Tor
+
+tor --version           # Check version
+tor &                   # Start Tor service
+torsocks lynx https://check.torproject.org
+torsocks lynx https://www.amazon.com
