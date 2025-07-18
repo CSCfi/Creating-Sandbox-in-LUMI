@@ -19,7 +19,7 @@ A simple Ubuntu-based environment for general command-line use.
 ### Build:
 ```bash
 module load LUMI/24.03 systools
-singularity build --sandbox desk.sif web_browsing.def
+singularity build --sandbox web_browsing.sif web_browsing.def
 ```
 
 
