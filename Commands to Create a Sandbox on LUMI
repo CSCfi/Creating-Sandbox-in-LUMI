@@ -1,45 +1,16 @@
+Module laod LUMI/24.03 systools
 
-🔹 Goal: Build and use a lightweight Conda-based sandbox using Singularity and cotainr.
+singularity build --sandbox output.sif desk.def
 
-1. Prepare your environment
+desk.def: 
 
-module load LUMI/23.09 cotainr
+Bootstrap: docker
+From: ubuntu:22.04
 
-2. Create a simple env.yml file
+%post
+apt-get update
+apt-get install -y wget curl lynx
 
-yaml
-CopyEdit
-# env.yml
-name: test-env
-channels:
-  - defaults
-dependencies:
-  - python=3.10
-  - numpy
-  - ipython
+sinsularity exec output.sif /bin/bash
 
-Save this file as env.yml in your working directory.
-
-3. Build the container sandbox
-
-cotainr build ./conda-cont-1 --base-image docker://ubuntu:22.04 --conda-env env.yml
-
-4. Run the container (non-interactive)
-
-./conda-cont-1 python -c "import numpy; print(numpy.__version__)"
-
-5. Run the container interactively (sandbox shell)
-
-./conda-cont-1 bash
-
-
-
--> Inside the container, you can:
-
-CopyEdit
-which python
-python
-conda list
-Ipython
-pip install pandas matplotlib
-pip install notebook
+lynx https://csc.fi/en/
