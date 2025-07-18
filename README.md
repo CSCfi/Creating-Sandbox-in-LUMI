@@ -2,8 +2,8 @@
 
 This project contains two Singularity container environments for use on the LUMI supercomputer. Both are built using Ubuntu 22.04 and targeted at different CLI use cases:
 
-1. **`desk.def`** – A lightweight development CLI environment (with `curl`, `wget`, `lynx`)
-2. **`onlineshopping.def`** – A secure, private browsing CLI environment using `tor`, `torsocks`, `lynx`, and `w3m`
+1. **`web_browsing.def`** – A lightweight development CLI environment (with `curl`, `wget`, `lynx`)
+2. **`online_shopping.def`** – A secure, private browsing CLI environment using `tor`, `torsocks`, `lynx`, and `w3m`
 
 ---
 
