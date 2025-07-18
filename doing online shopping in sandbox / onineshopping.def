@@ -1,4 +1,4 @@
-onlineshopping.def=
+
 
 Bootstrap: docker
 From: ubuntu:22.04
@@ -33,23 +33,3 @@ From: ubuntu:22.04
 
 
 
-->
-
-moduel load LUMI/24.06 systools
-
-singularity build --sandbox onlinehsopping.sif onlineshopping.def
-
-singularity exec onlineshopping.sif /bin/bash 
-
-singularity will open >>
-
-lynx https://www.amazon.com 
-
-( for my understanding=
-
-tor --version
-
-tor &
-
-torsocks lynx https://check.torproject.org
-torsocks lynx https://www.amazon.com/
