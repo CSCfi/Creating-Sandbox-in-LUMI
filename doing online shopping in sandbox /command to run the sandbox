@@ -1,4 +1,4 @@
-module load LUMI/24.06 systools
+module load LUMI/24.03 systools
 
 # Build a writable development container
 singularity build --sandbox online_shopping.sif online_shopping.def
