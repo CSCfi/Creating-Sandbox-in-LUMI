@@ -11,8 +11,6 @@ The goal is a tiny, auditable setup that works on shared HPC nodes where you can
 - A small `web_browsing.def` (Ubuntu 22.04 + lynx) you can build as a **sandbox** (writable directory) or **SIF** (single file).
 - Helper scripts to build images and run Lynx interactively or as a one-liner.
 
-**Checks / “Benchmarks”**
-- `smoke_test.sh` to verify HTTPS works, print Lynx and CA cert versions, and measure a first-page fetch time.
 
 **Guides & Utilities**
 - Notes for LUMI module setup (`LUMI/24.03`, `systools`).
