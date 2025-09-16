@@ -9,7 +9,7 @@ module load systools    # provides Singularity/Apptainer
 Build a writable development container
 
 ```bash
-singularity build --sandbox web_browsing.sif web_browsing.def
+singularity build --sandbox webbrowsing.sif webbrowsing.def
 
 singularity exec web_browsing.sif /bin/bash
 
