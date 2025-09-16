@@ -8,6 +8,14 @@ The goal is a tiny, auditable setup that works on shared HPC nodes where you can
 > Note: On LUMI the container runtime is **Apptainer** (the successor to Singularity).
 > Commands below use `apptainer`. If you only have `singularity`, the scripts
 > will automatically fall back to it.
+>
+
+We provide examples and experiments for:
+
+- **[onlineshopping](https://github.com/CSCfi/Creating-Sandbox-in-LUMI/tree/main/onlineshopping)** – doing secure online shopping on any online store
+- **[webbrowsing](https://github.com/CSCfi/Creating-Sandbox-in-LUMI/tree/main/webbrowsing)** – safetly browsing webpages
+
+---
 
 ## What to Expect in This Repo
 
