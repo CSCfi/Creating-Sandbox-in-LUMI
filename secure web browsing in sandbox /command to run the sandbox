@@ -1,9 +1,0 @@
-
-module load LUMI/24.03 systools
-
-singularity build --sandbox web_browsing.sif web_browsing.def
-
-singularity exec web_browsing.sif /bin/bash
-
-lynx https://csc.fi/en/
-
