@@ -1,43 +1,30 @@
-# Singularity Sandbox Containers on LUM: CLI Tools & Secure Browser
+# Developing Interactive Sandbox in LUMI
 
-This project contains two Singularity container environments for use on the LUMI supercomputer. Both are built using Ubuntu 22.04 and targeted at different CLI use cases:
 
-1. **`web_browsing.def`** – A lightweight development CLI environment (with `curl`, `wget`, `lynx`)
-2. **`online_shopping.def`** – A secure, private browsing CLI environment using `tor`, `torsocks`, `lynx`, and `w3m`
+This repository provides a minimal, reproducible sandboxed environment for **text-mode web browsing** on **LUMI** using **Lynx** inside a Singularity/Apptainer container.
+
+The goal is a tiny, auditable setup that works on shared HPC nodes where you can’t use Docker.
+
+## What to Expect in This Repo
+
+**Implementation Examples**
+- A small `web_browsing.def` (Ubuntu 22.04 + lynx) you can build as a **sandbox** (writable directory) or **SIF** (single file).
+- Helper scripts to build images and run Lynx interactively or as a one-liner.
+
+**Checks / “Benchmarks”**
+- `smoke_test.sh` to verify HTTPS works, print Lynx and CA cert versions, and measure a first-page fetch time.
+
+**Guides & Utilities**
+- Notes for LUMI module setup (`LUMI/24.03`, `systools`).
+- Tips for proxies and non-interactive builds.
+
+**Reproducibility**
+- Each script is self-contained and documented.
+- Expected outputs or checks are shown below so you can confirm a good build.
 
 ---
 
-## 📦 Container 1: `web browsing.def` – CLI Tools Sandbox
+## Installations (LUMI)
 
-A simple Ubuntu-based environment for general command-line use.
+> These examples are written for **LUMI**. If you use Puhti or Mahti, adjust modules/partitions accordingly.
 
-### Includes:
-- `wget`
-- `curl`
-- `lynx`
-
-### Build:
-```bash
-module load LUMI/24.03 systools
-singularity build --sandbox web_browsing.sif web_browsing.def
-```
-
-
-
-## 📦 Container 2: onlineshopping.def – Secure CLI Browser Sandbox
-
-A containerized CLI browsing environment designed for private, anonymized web access.
-
-### Includes:
-- `tor`
-- `torsocks`
-- `lynx`
-- `w3m`
-Timezone: Europe/Helsinki
-Locale: en_US.UTF-8
-
-### Build:
-```bash
-module load LUMI/24.06 systools
-singularity build --sandbox online_shopping.sif online_shopping.def
-```
