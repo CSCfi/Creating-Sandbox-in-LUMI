@@ -20,8 +20,8 @@ We provide examples and experiments for:
 ## What to Expect in This Repo
 
 **Implementation Examples**
-- A small `web_browsing.def` (Ubuntu 22.04 + lynx) you can build as a **sandbox** (writable directory) or **SIF** (single file).
-- Helper scripts to build images and run Lynx interactively or as a one-liner.
+- A small `webbrowsing.def` and `onlineshopping.def` (Ubuntu 22.04 + lynx) you can build as a **sandbox** (writable directory) or **SIF** (single file).
+- Helper scripts to build images and run Lynx interactively.
 
 
 **Guides & Utilities**
