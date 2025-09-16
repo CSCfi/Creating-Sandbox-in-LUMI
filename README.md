@@ -5,6 +5,10 @@ This repository provides a minimal, reproducible sandboxed environment for **tex
 
 The goal is a tiny, auditable setup that works on shared HPC nodes where you can’t use Docker.
 
+> Note: On LUMI the container runtime is **Apptainer** (the successor to Singularity).
+> Commands below use `apptainer`. If you only have `singularity`, the scripts
+> will automatically fall back to it.
+
 ## What to Expect in This Repo
 
 **Implementation Examples**
